@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main() {
+	var written float32
+	var lab float32
+	var assign float32
+	var result float32
+	fmt.Println("Enter your written exam mark")
+	fmt.Scanln(&written)
+	fmt.Println("Enter your written lab exam mark")
+	fmt.Scanln(&lab)
+	fmt.Println("Enter your assignment mark")
+	fmt.Scanln(&assign)
+	result = ((written * 70) / 100) + ((lab * 20) / 100) + ((assign * 10) / 100)
+	fmt.Println("Grade of the student is: ", result)
+}

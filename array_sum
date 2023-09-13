@@ -1,0 +1,67 @@
+package main
+
+import "fmt"
+
+func main() {
+	var size int
+	var array1 [100][100]int
+	var array2 [100][100]int
+	var sum [100][100]int
+	fmt.Println("Enter the size of array")
+	fmt.Scanln(&size)
+
+	//Read_array1_values
+
+	fmt.Println("Enter the element of array1: ")
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			fmt.Scanln(&array1[i][j])
+		}
+	}
+
+	//Print_values_array1
+	fmt.Println("Array1: ")
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			fmt.Printf("%d ", array1[i][j])
+		}
+		fmt.Println("")
+	}
+	fmt.Println("")
+
+	//Read_array2_values
+
+	fmt.Println("Enter the element of array2: ")
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			fmt.Scanln(&array2[i][j])
+		}
+	}
+
+	//Print_values_array2
+	fmt.Println("Array 2: ")
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			fmt.Printf("%d ", array2[i][j])
+		}
+		fmt.Println("")
+	}
+
+	//sum_of_array
+
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			sum[i][j] = array1[i][j] + array2[i][j]
+		}
+	}
+
+	//print_sum_of_array
+	fmt.Println("")
+	fmt.Println("Sum of array is")
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			fmt.Printf("%d ", sum[i][j])
+		}
+		fmt.Println("")
+	}
+}

@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	var limit int
+	number := 1
+	fmt.Println("Enter the limit")
+	fmt.Scanln(&limit)
+	for i := 1; i <= limit; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Print(number, "\t")
+			number++
+		}
+		fmt.Print("\n")
+	}
+}

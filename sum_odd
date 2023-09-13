@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	var limit int
+	sum := 0
+	fmt.Println("Enter the limit")
+	fmt.Scan(&limit)
+	for i := 0; i <= limit; i++ {
+		if i%2 != 0 {
+			sum = sum + i
+		}
+	}
+	fmt.Println("Sum of", limit, "odd numbers are: ", sum)
+
+}

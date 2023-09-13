@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func main() {
+	var size int
+	var temp int
+	fmt.Println("Enter the size of array")
+	fmt.Scan(&size)
+	fmt.Println("Enter", size, " array elements")
+	var array = make([]int, size)
+	for i := 0; i < size; i++ {
+		fmt.Scan(&array[i])
+	}
+	fmt.Println(array)
+	fmt.Println("Array in descending order")
+	for i := 0; i < size-1; i++ {
+		for j := i + 1; j < size; j++ {
+			if array[i] < array[j] {
+				temp = array[i]
+				array[i] = array[j]
+				array[j] = temp
+			}
+
+		}
+	}
+	fmt.Println(array)
+}

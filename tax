@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	var income int
+	var tax int
+	fmt.Println("Enter your annual income")
+	fmt.Scanln(&income)
+	if income < 250000 {
+		fmt.Printf("Income tax amount = 0.0")
+	} else if income >= 250000 && income <= 500000 {
+		tax = (income * 5) / 100
+		fmt.Printf("Income tax amount = %d", tax)
+	} else if income >= 5000000 && income <= 1000000 {
+		tax = (income * 20) / 100
+		fmt.Printf("Income tax amount = %d", tax)
+	} else if income >= 1000000 && income <= 5000000 {
+		tax = (income * 30) / 100
+		fmt.Printf("Income tax amount = %d", tax)
+	} else {
+		fmt.Printf("Invalid income")
+	}
+}

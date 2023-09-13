@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	var number1 int
+	var number2 float32
+	var sum float32
+	fmt.Printf("Enter two numbers:\n")
+	fmt.Scan(&number1)
+	fmt.Scan(&number2)
+	sum = float32(number1) + number2
+	fmt.Printf("Sum is: %.2f", sum)
+}

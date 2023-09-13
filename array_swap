@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+
+func main() {
+	var size int
+	fmt.Println("Enter the size of array: ")
+	fmt.Scanln(&size)
+
+	//Array1
+	var array1 = make([]int, size)
+	fmt.Println("Enter ", size, "array elements")
+	for i := 0; i < size; i++ {
+		fmt.Scan(&array1[i])
+	}
+	fmt.Println("Array 1:", array1)
+
+	//Array2
+	var array2 = make([]int, size)
+	fmt.Println("Enter ", size, "array elements")
+	for i := 0; i < size; i++ {
+		fmt.Scan(&array2[i])
+	}
+	fmt.Println("Array 2:", array2)
+	//Array_swaping
+	var temp int
+	for i := 0; i < size; i++ {
+		temp = array1[i]
+		array1[i] = array2[i]
+		array2[i] = temp
+	}
+
+	fmt.Println("Swapped arrays are")
+	fmt.Println("Array 1:", array1)
+	fmt.Println("Array 2:", array2)
+}

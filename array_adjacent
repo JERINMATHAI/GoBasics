@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	var size int
+	fmt.Println("Enter the size of array : ")
+	fmt.Scan(&size)
+	var array = make([]int, size)
+	for i := 0; i < size; i++ {
+		fmt.Printf("Enter %d th element : ", i)
+		fmt.Scan(&array[i])
+	}
+	fmt.Println("Orginal array is : ", array)
+
+	var array2 = make([]int, size-1)
+	for i := 0; i < size-1; i++ {
+		array2[i] = array[i] * array[i+1]
+	}
+	fmt.Println("Multiplied array is : ", array2)
+}

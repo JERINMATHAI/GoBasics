@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main() {
+	//SI=pnr/100
+	var p int
+	var n float32
+	var r float32
+	var SI float32
+	fmt.Println("Enter the principle amount")
+	fmt.Scan(&p)
+	fmt.Println("Enter the number of years")
+	fmt.Scan(&n)
+	fmt.Println("Enter the rate of intrest")
+	fmt.Scan(&r)
+	SI = (float32(p) * n * r) / 100
+	fmt.Println("Sum is: ", SI)
+}
